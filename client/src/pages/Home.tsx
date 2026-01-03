@@ -1,25 +1,32 @@
-import { Button } from "@/components/ui/button";
-import { Loader2 } from "lucide-react";
-import { Streamdown } from 'streamdown';
-
-/**
- * All content in this page are only for example, replace with your own feature implementation
- * When building pages, remember your instructions in Frontend Best Practices, Design Guide and Common Pitfalls
+/*
+ * Royal Sovereign Design Theme - Home Page
+ * - Full landing page with all sections
+ * - Stunning visual design with gold and navy
+ * - Complete maritime academy showcase
  */
-export default function Home() {
-  // If theme is switchable in App.tsx, we can implement theme toggling like this:
-  // const { theme, toggleTheme } = useTheme();
 
+import Header from '@/components/Header';
+import Footer from '@/components/Footer';
+import HeroSection from '@/components/HeroSection';
+import DepartmentsSection from '@/components/DepartmentsSection';
+import FeaturedCoursesSection from '@/components/FeaturedCoursesSection';
+import DirectorSection from '@/components/DirectorSection';
+import ProgramsSection from '@/components/ProgramsSection';
+import ContactSection from '@/components/ContactSection';
+
+export default function Home() {
   return (
     <div className="min-h-screen flex flex-col">
-      <main>
-        {/* Example: lucide-react for icons */}
-        <Loader2 className="animate-spin" />
-        Example Page
-        {/* Example: Streamdown for markdown rendering */}
-        <Streamdown>Any **markdown** content</Streamdown>
-        <Button variant="default">Example Button</Button>
+      <Header />
+      <main className="flex-1">
+        <HeroSection />
+        <DepartmentsSection />
+        <FeaturedCoursesSection />
+        <DirectorSection />
+        <ProgramsSection />
+        <ContactSection />
       </main>
+      <Footer />
     </div>
   );
 }
